@@ -429,6 +429,11 @@ body {
     fill: var(--accent-color);
 }
 
+.footer-social-icons {
+    width: 24px;
+    height: 24px;
+}
+
 /* ============ Customers ============ */
 
 .customers {
@@ -671,6 +676,10 @@ body {
     width: 264px;
 }
 
+.footer-social {
+    margin-right: 80px;
+}
+
 .footer-head {
     margin-bottom: 16px;
 
@@ -705,6 +714,83 @@ body {
     background-color: var(--button-secondary-color);
 }
 
+.footer-subscr-block {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.footer-email {
+    position: relative;
+    display: inline-block;
+    width: 264px;
+
+    margin-top: 16px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+}
+
+.footer-email-input {
+
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+
+    padding-left: 16px;
+
+    color: var(--primary-fon-color);
+    border: 1px solid var(--primary-fon-color);
+    border-radius: 4px;
+    background-color: var(--second-color);
+}
+
+.footer-email-label {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    transform: translateY(0);
+
+    transition: transform 250ms var(--func-time);
+}
+
+.footer-email-input:hover+.footer-email-label,
+.footer-email-input:not(:placeholder-shown)+.footer-email-label {
+    transform: translateY(-120%);
+}
+
+.footer-btn {
+    display: flex;
+
+    width: 165px;
+    height: 40px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--primary-fon-color);
+
+    border-radius: 4px;
+    background-color: var(--button-color);
+
+    transition: background-color 250ms var(--func-time);
+}
+
+.footer-btn:hover {
+    background-color: var(--button-secondary-color);
+}
+
+
 /* =============== modal ================== */
 .backdrop {
     position: fixed;
@@ -737,6 +823,7 @@ body {
     transform: translate(-50%, -50%);
 
     width: 408px;
+    padding: 24px;
     min-height: 576px;
     border-radius: 4px;
 
@@ -789,4 +876,65 @@ body {
 .modal-button:hover .btn-close,
 .modal-button:focus .btn-close {
     fill: var(--primary-fon-color);
+}
+
+.modal-head {
+    margin-top: 48px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+}
+
+.modal-label {
+    margin-top: 8px;
+    display: block;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.17;
+
+    color: var(--icon-color);
+}
+
+.modal-name-block {
+    position: relative;
+    display: block;
+}
+
+.modal-input {
+    margin-top: 4px;
+    width: 100%;
+    height: 40px;
+
+    padding-left: 38px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+}
+
+.modal-ico {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: var(--second-color);
+}
+
+.modal-input:hover {
+    border-color: var(--button-color);
+}
+
+.modal-input:hover+.modal-ico {
+    fill: var(--button-color);
 }
