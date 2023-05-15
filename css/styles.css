@@ -838,7 +838,7 @@ body {
 
 }
 
-.modal-button {
+.modal-close {
     position: absolute;
     padding: 0;
     top: 24px;
@@ -861,24 +861,25 @@ body {
         border 250ms var(--func-time);
 }
 
-.modal-button:hover,
-.modal-button:focus {
+.modal-close:hover,
+.modal-close:focus {
     background-color: var(--button-accent-color);
     border: none;
 }
 
-.btn-close {
+.icon-close {
     fill: var(--primary-text-color);
 
     transition: fill 250ms var(--func-time);
 }
 
-.modal-button:hover .btn-close,
-.modal-button:focus .btn-close {
+.modal-close:hover .icon-close,
+.modal-close:focus .icon-close {
     fill: var(--primary-fon-color);
 }
 
 .modal-head {
+    display: block;
     margin-top: 48px;
 
     font-weight: 500;
@@ -890,8 +891,8 @@ body {
 }
 
 .modal-label {
-    margin-top: 8px;
     display: block;
+    margin-top: 8px;
 
     font-weight: 400;
     font-size: 12px;
@@ -904,10 +905,10 @@ body {
 .modal-name-block {
     position: relative;
     display: block;
+    margin-top: 4px;
 }
 
 .modal-input {
-    margin-top: 4px;
     width: 100%;
     height: 40px;
 
@@ -918,23 +919,86 @@ body {
     line-height: 1.17;
     letter-spacing: 0.04em;
 
+    /* outline: transparent; */
+    outline: none;
 
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 4px;
+    border-color: rgba(46, 47, 66, 0.4);
+
+    transition: border-color 250ms var(--func-time);
 }
 
-.modal-ico {
+.modal-input.comment {
+    padding-left: 16px;
+    padding-top: 8px;
+
+    height: 120px;
+    resize: none;
+
+    font-size: 12px;
+}
+
+.modal-icon {
     position: absolute;
     top: 50%;
     left: 16px;
+
+    pointer-events: none;
     transform: translateY(-50%);
+
     fill: var(--second-color);
+    transition: fill 250ms var(--func-time);
 }
 
-.modal-input:hover {
+.modal-input:hover,
+.modal-input:focus {
     border-color: var(--button-color);
 }
 
-.modal-input:hover+.modal-ico {
+.modal-input:hover+.modal-icon,
+.modal-input:focus+.modal-icon {
     fill: var(--button-color);
+}
+
+.modal-check {
+    display: flex;
+    align-content: center;
+}
+
+.input-check {
+    appearance: none;
+    margin-top: 16px;
+}
+
+.check-icon {
+    margin-right: 8px;
+}
+
+.unchecked {
+    opacity: 1;
+    transition: opacity 250ms var(--func-time);
+}
+
+.checked {
+    opacity: 0;
+    transition: opacity 250ms var(--func-time);
+}
+
+.input-check:checked+.check-icon>.unchecked {
+    opacity: 0;
+}
+
+.input-check:checked+.check-icon>.checked {
+    opacity: 1;
+}
+
+.modal-link {
+    color: var(--button-color);
+}
+
+.modal-btn {
+    margin-top: 24px;
+
 }

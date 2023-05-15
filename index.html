@@ -558,10 +558,13 @@
               <input
                 class="footer-email-input"
                 type="email"
-                name="email"
+                name="subscr_email"
+                id="subscr_email"
                 placeholder=" "
               />
-              <label class="footer-email-label" for="email">E-mail</label>
+              <label class="footer-email-label" for="subscr_email"
+                >E-mail</label
+              >
             </div>
             <button type="submit" class="footer-btn">
               Subscribe
@@ -576,27 +579,56 @@
     <!----------------- modal --------------->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-button" data-modal-close>
-          <svg class="btn-close" width="8" height="8">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="icon-close" width="8" height="8">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
 
-        <p class="modal-head">Leave your contacts and we will call you back</p>
+        <strong class="modal-head"
+          >Leave your contacts and we will call you back</strong
+        >
         <label class="modal-label" for="name">Name</label>
         <div class="modal-name-block">
           <input class="modal-input" type="text" id="name" name="name" />
-          <svg class="modal-ico" width="12" height="12">
+          <svg class="modal-icon" width="12" height="12">
             <use href="./images/icons.svg#man"></use>
           </svg>
         </div>
         <label class="modal-label" for="phone">Phone</label>
         <div class="modal-name-block">
           <input class="modal-input" type="tel" id="phone" name="phone" />
-          <svg class="modal-tel" width="13" height="13">
+          <svg class="modal-icon" width="13" height="13">
             <use href="./images/icons.svg#tel"></use>
           </svg>
         </div>
+        <label class="modal-label" for="email">Email</label>
+        <div class="modal-name-block">
+          <input class="modal-input" type="email" id="email" name="email" />
+          <svg class="modal-icon" width="15" height="12">
+            <use href="./images/icons.svg#post"></use>
+          </svg>
+        </div>
+        <label class="modal-label"
+          >Comment
+          <textarea
+            class="modal-input comment"
+            name="comment"
+            placeholder="Text input"
+          ></textarea>
+        </label>
+        <label class="modal-label modal-check">
+          <input class="input-check" type="checkbox" name="policy" />
+          <svg class="check-icon" width="16" height="16">
+            <use class="checked" href="./images/icons.svg#check"></use>
+            <use class="unchecked" href="./images/icons.svg#uncheck"></use>
+          </svg>
+          <span
+            >I accept the terms and conditions of the
+            <a class="link modal-link" href="">Privacy Policy</a>
+          </span>
+        </label>
+        <button type="button" class="hero-btn modal-btn">Send</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
